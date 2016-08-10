@@ -1,0 +1,7 @@
+{
+  "server": "irc.gamesurge.net",
+  "port": 6667,
+  "nick": "nodeserv",
+  "user": "nodeserv",
+  "channel": "#drow"
+}

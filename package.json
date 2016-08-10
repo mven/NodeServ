@@ -1,0 +1,35 @@
+{
+  "name": "nodeserv",
+  "version": "1.0.0",
+  "description": "An open source IRC bot built on NodeJS and ES6",
+  "main": "index.js",
+  "dependencies": {
+    "google": "^2.0.0",
+    "log4js": "^0.6.36",
+    "net": "^1.0.2"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-es2015-rollup": "^1.0.0",
+    "rollup": "^0.21.2",
+    "rollup-plugin-babel": "^2.2.0"
+  },
+  "scripts": {
+    "prebuild": "eslint lib test",
+    "build": "rollup -c rollup.umd.config.js && rollup -c rollup.es6.config.js",
+    "pretest": "rollup -c rollup.test.config.js",
+    "test": "mocha build/test-bundle.js",
+    "prepublish": "npm run build && npm test",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mven/NodeServ.git"
+  },
+  "author": "Michael Vendivel <michael@vendivel.com> (http://vendivel.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mven/NodeServ/issues"
+  },
+  "homepage": "https://github.com/mven/NodeServ#readme"
+}
