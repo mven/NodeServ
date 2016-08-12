@@ -6,7 +6,7 @@ var path = require('path'),
     google = require('google');
 
 var log4js = require('log4js'),
-    logger = log4js.getLogger();
+    logger = log4js.getLogger('IRC');
 
 var { nick, user, channel, port, server } = config;
 
